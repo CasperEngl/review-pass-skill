@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Pass"
+  short_description: "Work through PR comments"
+  default_prompt: "Use $review-pass to work through PR comments, fix clear issues, and draft concise review replies."
