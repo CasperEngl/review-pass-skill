@@ -15,12 +15,23 @@ Use this skill when a user wants help working through PR review comments end to 
 
 Use it for GitHub PR review comments and similar review-thread workflows.
 
+## Mode Requirement
+
+For the initial scoping pass, use Plan mode if it is available in the current environment.
+
+- Do the first scope in Plan mode before making edits or drafting final replies.
+- Use that step to inventory the active review threads, identify likely `fix now` / `postpone` / `won't do` candidates, and surface any true interpretation questions.
+- If the environment exposes a dedicated question tool in Plan mode, use it there for the minimum high-leverage clarification needed.
+- If Plan mode is not available, continue with the workflow below in the current mode.
+
 ## Workflow
 
-1. Ground in the current PR.
+1. Scope the pass.
+   - In Plan mode when available, do the initial scope there.
    - Identify the current branch and PR.
    - Fetch review threads, including resolved state, file path, author, and latest replies.
    - Ignore praise-only comments unless the user explicitly wants replies to those too.
+   - Build an initial thread inventory before changing code.
 
 2. Read local diff and code context before classifying.
    - Do not classify from the comment text alone when the branch can answer the question.
