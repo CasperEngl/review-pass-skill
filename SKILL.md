@@ -143,12 +143,27 @@ Leave the thread open when:
 - there is still product or architecture interpretation involved
 - the user explicitly wants to keep it open
 
+## Per-Comment Output Format
+
+For each actionable review comment or thread, include a separate Markdown table with these columns:
+
+| Status | Original comment | Reply |
+| --- | --- | --- |
+| `fix now` / `postpone` / `won't do` | the original reviewer comment, quoted or tightly paraphrased | the exact reply you would post |
+
+Formatting rules:
+
+- Use one table per comment or thread, not one combined table for the whole PR.
+- Keep `Status` aligned to the classification from this skill.
+- If helpful, append the final thread state in the status cell, for example `fix now, resolved` or `postpone, left open`.
+- Keep the `Original comment` cell faithful to the reviewer’s point; shorten only when needed for readability.
+- Put the exact final reply text in the `Reply` cell, based on the current branch state after any fixes.
+
 ## Output Checklist
 
 When handling a PR review pass, provide:
 
 - the list of open reviewer threads
-- the proposed classification for each thread
+- a separate table for each thread with `Status`, `Original comment`, and `Reply`
 - any fixes applied
-- the final reply text for each thread
 - which threads were resolved and which were intentionally left open
